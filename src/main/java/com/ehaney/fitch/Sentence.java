@@ -14,7 +14,7 @@ public class Sentence {
     public Sentence() {
         this("", "", 0, false);
     }
-    public Sentence(String inputText, String formatText, int indentLevel, boolean isDerived) {
+    private Sentence(String inputText, String formatText, int indentLevel, boolean isDerived) {
         this.inputText = new SimpleStringProperty(inputText);
         this.formatText = new SimpleStringProperty(formatText);
         this.indentLevel = new SimpleIntegerProperty(indentLevel);
