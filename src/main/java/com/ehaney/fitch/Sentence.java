@@ -69,5 +69,13 @@ public class Sentence {
         return isDerived;
     }
 
+    private void formatInputText() {
+        String input = getInputText();
 
+        for (String alias : Aliases.getKeys()) {
+            input.replace(alias, Aliases.convert(alias));
+        }
+
+        setFormatText(input);
+    }
 }
